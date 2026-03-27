@@ -1,0 +1,40 @@
+# ── Credentials & secrets ─────────────────────────────────────────────
+# NEVER commit config.json — it contains your private key
+config.json
+
+# ── Runtime databases ─────────────────────────────────────────────────
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+
+# ── Logs ──────────────────────────────────────────────────────────────
+user_data/logs/
+
+# ── Freqtrade runtime data ────────────────────────────────────────────
+user_data/data/
+user_data/backtest_results/
+user_data/hyperopt_results/
+user_data/plot/
+
+# ── Python ────────────────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# ── Virtual environment ───────────────────────────────────────────────
+.venv/
+venv/
+env/
+
+# ── OS / Editor ───────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/

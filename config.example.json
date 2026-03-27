@@ -1,0 +1,81 @@
+{
+    "bot_name": "TradeX Bot",
+    "stake_currency": "USDC",
+    "stake_amount": 10,
+    "tradable_balance_ratio": 0.99,
+    "fiat_display_currency": "USD",
+    "dry_run": true,
+    "dry_run_wallet": 1000,
+    "trading_mode": "futures",
+    "margin_mode": "isolated",
+    "liquidation_buffer": 0.05,
+    "max_open_trades": 1,
+    "exchange": {
+        "name": "hyperliquid",
+        "walletAddress": "0xYOUR_WALLET_ADDRESS",
+        "privateKey": "YOUR_PRIVATE_KEY_WITHOUT_0x_PREFIX",
+        "ccxt_config": {},
+        "ccxt_sync_config": {},
+        "ccxt_async_config": {},
+        "pair_whitelist": [
+            "BTC/USDC:USDC"
+        ],
+        "pair_blacklist": []
+    },
+    "pairlists": [
+        {
+            "method": "StaticPairList"
+        }
+    ],
+    "position_adjustment_enable": true,
+    "max_entry_position_adjustment": 4,
+    "entry_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1,
+        "price_last_balance": 0.0,
+        "check_depth_of_market": {
+            "enabled": false,
+            "bids_to_ask_delta": 1
+        }
+    },
+    "exit_pricing": {
+        "price_side": "other",
+        "use_order_book": true,
+        "order_book_top": 1
+    },
+    "unfilledtimeout": {
+        "entry": 20,
+        "exit": 20,
+        "exit_timeout_count": 0,
+        "unit": "seconds"
+    },
+    "order_types": {
+        "entry": "limit",
+        "exit": "limit",
+        "stoploss": "limit",
+        "stoploss_on_exchange": true
+    },
+    "discord": {
+        "enabled": false,
+        "webhook_url": "https://discord.com/api/webhooks/YOUR_WEBHOOK_URL"
+    },
+    "api_server": {
+        "enabled": true,
+        "listen_ip_address": "127.0.0.1",
+        "listen_port": 8080,
+        "verbosity": "info",
+        "enable_openapi": false,
+        "jwt_secret_key": "CHANGE_ME_RANDOM_SECRET_MIN_32_CHARS",
+        "CORS_origins": [],
+        "username": "tradex",
+        "password": "CHANGE_ME_STRONG_PASSWORD",
+        "ws_token": "CHANGE_ME_WEBSOCKET_TOKEN"
+    },
+    "initial_state": "running",
+    "force_entry_enable": false,
+    "internals": {
+        "process_throttle_secs": 5
+    },
+    "logfile": "user_data/logs/tradex.log"
+}
